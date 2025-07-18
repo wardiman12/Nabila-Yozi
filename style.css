@@ -1,0 +1,489 @@
+:root {
+  --pink: #f14e95;
+  --bg: #0a0a0a;
+  --shadow: 0 2px 2px rgba(0, 0, 0, 0.635);
+}
+body,
+html {
+  width: 100vw;
+  overflow-x: hidden;
+}
+body {
+  font-size: 1.2rem;
+  font-family: "merienda";
+}
+
+/* .hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(img/wedding3.jpg);
+  z-index: -1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 5rem;
+}*/
+.hero {
+  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url(img/wedding3.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding-bottom: 10rem;
+}
+
+.hero h1 {
+  font-family: "Qwigley";
+  font-size: 7rem;
+  text-shadow: var(--shadow);
+}
+
+.hero h4 {
+  font-size: 1rem;
+}
+
+.hero p {
+  font-size: 1rem;
+}
+
+.hero a {
+  padding: 9px;
+  font-size: 10px;
+  width: auto;
+  background-color: white;
+  border-radius: 40px;
+  color: var(--pink);
+}
+.hero a:hover {
+  color: white;
+  background-color: var(--pink);
+  transition: 0.3s;
+}
+
+.navbar-nav a {
+  margin: 6px;
+  margin-left: 30px;
+}
+.mynav {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  z-index: 1110 !important;
+  width: 100% !important;
+  position: relative !important;
+  display: block !important;
+}
+.mynav .navbar-brand,
+.mynav .offcanvas-title {
+  font-size: 2rem;
+}
+.offcanvas-body .navbar-nav a {
+  font-size: 1.4rem;
+}
+.mynav .navbar-brand span {
+  color: var(--pink);
+  font-weight: bold;
+}
+.mynav .navbar-brand {
+  font-weight: bold;
+}
+.mynav .nav-link {
+  text-transform: uppercase;
+}
+.mynav .nav-link:hover {
+  color: var(--pink);
+}
+
+.home {
+  background-image: url(img/background2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  padding-top: 15rem;
+  margin-bottom: 5rem;
+}
+.home .container h2 {
+  font-size: 4.2rem;
+  font-family: "dancing script";
+}
+.fade-in-on-scroll,
+.show-up-on-scroll {
+  opacity: 0;
+  transition: opacity 3s cubic-bezier(0.4, 2, 0.6, 1),
+    transform 3s cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+.fade-in-on-scroll {
+  transform: none;
+}
+.show-up-on-scroll {
+  transform: translateY(30px);
+}
+
+.fade-in-on-scroll.active {
+  opacity: 1;
+}
+.show-up-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.couple {
+  background-image: url(img/background1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 9rem;
+  margin-bottom: 5rem;
+  padding-bottom: 10rem;
+}
+.couple a {
+  padding: 5px;
+  font-size: 12px;
+  width: auto;
+  background-color: var(--pink);
+  border-radius: 40px;
+  color: white;
+  margin-top: -1rem;
+}
+.couple p {
+  font-size: 1.1rem;
+}
+.couple h2 {
+  font-family: "dancing script";
+  font-size: 3rem;
+  font-weight: 500;
+}
+.couple h5 {
+  font-weight: bold;
+}
+.slide-right,
+.slide-left,
+.fade-in {
+  opacity: 0;
+  animation-duration: 0.8s;
+  animation-fill-mode: both;
+  animation-timing-function: cubic-bezier(0.4, 2, 0.6, 1);
+}
+
+.slide-right {
+  transform: translateX(60px);
+  animation-name: slideInRight;
+}
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.slide-left {
+  transform: translateX(-60px);
+  animation-name: slideInLeft;
+}
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation-name: fadeIn;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.info {
+  background-image: url(img/background2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 10rem;
+  padding-bottom: 16rem;
+}
+.info a {
+  padding: 10px;
+  font-size: 14px;
+  width: auto;
+  background-color: var(--pink);
+  border-radius: 30px;
+  color: white;
+}
+.info a:hover,
+.couple a:hover {
+  color: var(--pink);
+  background-color: white;
+  transition: 0.3s;
+  border: 1px solid var(--pink);
+}
+.info h2,
+.gift h2 {
+  font-family: "lavishly yours";
+  font-size: 5rem;
+}
+.info .alamat {
+  font-size: 1.1rem;
+}
+
+.rsvp {
+  background-image: url(img/background2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+}
+.rsvp h2 {
+  font-family: "dancing script";
+  font-size: 4rem;
+}
+.rsvp button {
+  padding: 8px 24px !important;
+  font-size: 14px !important;
+  width: auto !important;
+  display: inline-block !important;
+  background-color: var(--pink) !important;
+  box-shadow: var(--shadow) !important;
+  border-radius: 30px !important;
+}
+.rsvp form {
+  padding: 8px 24px !important;
+  font-size: 16px !important;
+  width: auto !important;
+  display: inline-block !important;
+}
+
+.gift {
+  text-align: center;
+  background-image: url(img/background2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 100vh;
+  margin-top: -5rem;
+  padding-top: 10rem;
+}
+.gift .title,
+.info .myinfo {
+  padding: 3rem;
+  font-size: medium;
+}
+.info .myinfo {
+  padding: 1rem 5rem;
+}
+.info .myinfo p {
+  font-family: "dancing script";
+  font-size: 4rem;
+  font-weight: bold;
+  color: var(--pink);
+  text-shadow: var(--shadow);
+}
+.title,
+.info .myinfo {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1px;
+  border-radius: 8px;
+  margin: 15px 0;
+}
+.number {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--pink);
+  text-align: center;
+}
+.button-copy {
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.button-copy:hover,
+.rsvp button:hover {
+  color: var(--pink);
+  background-color: white;
+  border: 1px solid var(--pink);
+}
+.copy-button:active {
+  transform: scale(0.95);
+}
+.copy-notification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  z-index: 1000;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+footer {
+  padding: 2rem;
+  background-color: var(--pink);
+  color: white;
+}
+footer a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+footer i {
+  list-style: none;
+  margin: 5px;
+}
+
+.audio-icon-wrapper {
+  width: 4rem;
+  height: 4rem;
+  font-size: 4rem;
+  position: fixed;
+  bottom: 2.5rem;
+  right: 2rem;
+  cursor: pointer;
+  color: white;
+  opacity: 0.5;
+  mix-blend-mode: difference;
+  animation: rotating 4s linear infinite;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 0;
+  z-index: 1100;
+}
+
+@keyframes rotating {
+  form {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* animated text */
+/* Animasi Fade In */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: none;
+  transition: opacity 0.8s, transform 0.8s;
+}
+.fade-in-on-scroll.active {
+  opacity: 1;
+}
+
+/* Slide dari kanan */
+.slide-right-on-scroll {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 2s, transform 2s;
+}
+.slide-right-on-scroll.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Slide dari kiri */
+.slide-left-on-scroll {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 2s, transform 2s;
+}
+.slide-left-on-scroll.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Zoom In */
+.zoom-in-on-scroll {
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.zoom-in-on-scroll.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Bounce */
+.bounce-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+.bounce-on-scroll.active {
+  opacity: 1;
+  animation: bounceIn 0.8s;
+  transform: translateY(0);
+}
+@keyframes bounceIn {
+  0% {
+    transform: translateY(40px);
+  }
+  60% {
+    transform: translateY(-20px);
+  }
+  80% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Card Fade */
+.card-fade-on-scroll {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.card-fade-on-scroll.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Show Up (dari bawah) */
+.show-up-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s, transform 0.8s;
+}
+.show-up-on-scroll.active {
+  opacity: 1;
+  transform: translateY(0);
+}
